@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="admin" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Ahmad\\source\\repos\\PolutionMonitor\\PolutionMonitor\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Ahmad\\source\\repos\\PolutionMonitor\\PolutionMonitor\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="ApplicationDbContext-Web.config Connection String" description="" value="data source=pm-db-instance.cww33fqrfhae.eu-central-1.rds.amazonaws.com;initial catalog=polution-manager;persist security info=True;user id=admin;password=siraj2020;MultipleActiveResultSets=True;App=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmad\\source\\repos\\PolutionMonitor\\PolutionMonitor\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ApplicationDbContext']/@connectionString" />
+  </parameter>
+</parameters>

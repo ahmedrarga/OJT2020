@@ -8,20 +8,22 @@ namespace PolutionMonitor.Models
 
     public partial class User
     {
-        public int userID { get; set; }
+        public int ID { get; set; }
 
         [Required]
+        [StringLength(50)]
         public string username { get; set; }
 
         [Required]
+        [StringLength(16)]
         public string password { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(50)]
         public string firstName { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(50)]
         public string lastName { get; set; }
 
         [Required]
@@ -29,7 +31,7 @@ namespace PolutionMonitor.Models
         public string phoneNumber { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(100)]
         public string email { get; set; }
 
         public int organizationID { get; set; }

@@ -31,7 +31,7 @@ namespace PolutionMonitor.Controllers
         //Get customer by id
         public JsonResult Get(int id)
         {
-            var obj = _context.Users.FirstOrDefault(x => x.userID == id);
+            var obj = _context.Users.FirstOrDefault(x => x.ID == id);
             if (obj != null)
             {  
                 return new JsonResult { Data = new { success = true, data = obj }, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
@@ -66,7 +66,7 @@ namespace PolutionMonitor.Controllers
             var succ = false;
             try
             {
-                var toEdit = _context.Users.FirstOrDefault(x => x.userID == id);
+                var toEdit = _context.Users.FirstOrDefault(x => x.ID == id);
                 if (toEdit != null)
                 {
                     toEdit.username = obj.username;
@@ -76,6 +76,7 @@ namespace PolutionMonitor.Controllers
                     toEdit.password = obj.password;
                     toEdit.email = obj.email;
                     toEdit.phoneNumber = obj.phoneNumber;
+
                     _context.Entry(toEdit).State = System.Data.Entity.EntityState.Modified;
                     _context.SaveChanges();
                     succ = true;
@@ -91,18 +92,19 @@ namespace PolutionMonitor.Controllers
 
         // DELETE: api/Customers/5
         //delete customer
-        public void Delete(int id)
+        public JsonResult Delete(int id)
         {
             var succ = false;
             try
             {
-                _context.Users.RemoveRange(_context.Users.Where(x => x.userID == id));
+                _context.Users.RemoveRange(_context.Users.Where(x => x.ID == id));
                 _context.SaveChanges();
                 succ = true;
             } catch(Exception e)
             {
 
             }
+            return new JsonResult { Data = new { success = succ }, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
        
     }

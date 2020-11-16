@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ApplicationDbContext-Web.config Connection String" description="ApplicationDbContext Connection String used in web.config by the application to access the database." defaultValue="data source=pm-db-instance.cww33fqrfhae.eu-central-1.rds.amazonaws.com;initial catalog=polution-manager;persist security info=True;user id=admin;password=siraj2020;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ahmad\\source\\repos\\PolutionMonitor\\PolutionMonitor\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ApplicationDbContext']/@connectionString" />
+  </parameter>
+</parameters>
